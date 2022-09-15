@@ -1,0 +1,915 @@
+.confirm-order{
+    width: 100%;
+    min-height: 100%;
+    background: #f6f6f6;
+    //单选框
+    .select-mode{
+        position: fixed;
+        top: 45px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        padding: 0 16px;
+        font-size: 12px;
+        .lable{
+            font-weight: bold;
+            color: #242424;
+        }
+        .radio-wrap{
+            color: #242424;
+            ul{
+                display: flex;
+                li{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 20px;
+                    // 单选
+                    input[type=radio] {
+                        background: url('../../assets/orderfood/radioicon_on.png') no-repeat center;
+                        background-size: 100%;
+                        vertical-align:text-bottom;
+                        margin-bottom:2px; 
+                        margin-bottom:-2px\9;
+                    }
+                    input[type=radio]:checked{
+                        background: url('../../assets/orderfood/radioicon.png') no-repeat center;
+                        background-size: 100%;
+                        vertical-align:text-bottom; 
+                        margin-bottom:2px; 
+                        margin-bottom:-2px\9;
+                    }
+                    .icon_btn{
+                        display: block; 
+                        width: 12px; 
+                        height: 12px; 
+                        background-color: #fff; 
+                        -webkit-appearance:none;
+                        outline: none; 
+                        border: none;
+                    }
+                    .icon_text{
+                        color: #242424;
+                    }
+                }
+            }
+        }
+        .choose-mode{
+            display: flex;
+            justify-content: flex-end;
+            flex: 1;
+            img{
+                width: 6px;
+                height: 10px;
+                vertical-align: middle;
+            }
+        }
+    }
+    //自定义
+    .custom-mode{
+        position: fixed;
+        top: 45px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 41px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        padding: 0 16px;
+        .lable{
+            font-size: 12px;
+            font-weight: bold;
+            color: #242424;
+        }
+    }
+    .divine{
+        height: 84px;
+    }
+    .divine2{
+        height: 52px;
+    }
+    //外卖配送
+    .content-wrap{
+        box-sizing: border-box;
+        margin: 21px 16px;
+        //统一取餐tab
+        .tab{
+            position: relative;
+            width: 343px;
+            height: 35px;
+            background: #ffeeef;
+            border-radius: 0px 10px 0px 0px;
+            .text{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: bold;
+                color: #242424;
+                width: 115px;
+                height: 44px;
+                background: #FFFFFF;
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+        //自定义取餐tab
+        .custom-tab{
+            width: 343px;
+            height: 35px;
+            background: #ffeeef;
+            border-radius: 0px 10px 0px 0px;
+            ul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 33%;
+                    height: 100%;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #242424;
+                    border-top-right-radius: 25px;
+                }
+                .activeCus{
+                    background: #fff;
+                    height: 50px;
+                }
+            }
+        }
+        //外卖配送
+        .delivery{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 78px;
+            padding: 0 12px;
+            background: #fff;
+            box-sizing: border-box;
+            border-bottom: 1px dashed #eee;
+            .delivery-addr{
+                display: flex;
+                align-items: center;
+                .text{
+                    flex: 1;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #FF5D62;
+                }
+            }
+            .select-addr{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .addr-info{
+                    flex: 1;
+                    .address{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #242424;
+                        width: 220px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .info{
+                        font-size: 11px;
+                        color: #959595;
+                        margin-top: 4px;
+                        .name{}
+                        .phone{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+            .delivery-date{
+                display: flex;
+                align-items: center;
+                margin-top: 16px;
+                .text{
+                    flex: 1;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                .date{
+                    font-size: 12px;
+                    color: #FF5D62;
+                    padding-right: 8px;
+                }
+            }
+            .bage1{
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                width: 6px;
+                height: 12px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background: #EEEEEE;
+            }
+            .bage2{
+                position: absolute;
+                right: 0;
+                bottom: -6px;
+                width: 6px;
+                height: 12px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+                background: #EEEEEE;
+            }
+        }
+        //食堂自取
+        .invite{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 12px 18px;
+            background: #fff;
+            box-sizing: border-box;
+            border-bottom: 1px dashed #eee;
+            .delivery-addr{
+                font-size: 16px;
+                font-weight: bold;
+                color: #242424;
+            }
+            .delivery-date{
+                display: flex;
+                align-items: center;
+                margin-top: 16px;
+                .text{
+                    flex: 1;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                .date{
+                    font-size: 12px;
+                    color: #FF5D62;
+                    padding-right: 8px;
+                }
+            }
+            .bage1{
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                width: 6px;
+                height: 12px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background: #EEEEEE;
+            }
+            .bage2{
+                position: absolute;
+                right: 0;
+                bottom: -6px;
+                width: 6px;
+                height: 12px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+                background: #EEEEEE;
+            }
+        }
+        //到店堂食
+        //外卖配送
+        .toCanteen{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 78px;
+            padding: 0 12px;
+            background: #fff;
+            box-sizing: border-box;
+            border-bottom: 1px dashed #eee;
+            .delivery-addr{
+                display: flex;
+                align-items: center;
+                .text{
+                    flex: 1;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #242424;
+                }
+            }
+            .delivery-date{
+                display: flex;
+                align-items: center;
+                margin-top: 16px;
+                .text{
+                    flex: 1;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                .date{
+                    font-size: 12px;
+                    color: #FF5D62;
+                    padding-right: 8px;
+                }
+            }
+            .bage1{
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                width: 6px;
+                height: 12px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background: #EEEEEE;
+            }
+            .bage2{
+                position: absolute;
+                right: 0;
+                bottom: -6px;
+                width: 6px;
+                height: 12px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+                background: #EEEEEE;
+            }
+        }
+        //食品列表
+        .food-wrap{
+            background: #fff;
+            box-sizing: border-box;
+            padding: 18px 12px 0;
+            .header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .canteen{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #242424;
+                }
+                .time{
+                    font-size: 11px;
+                    color: #5D5D5D;
+                }
+            }
+            .food-list{
+                padding-top: 18px;
+                border-bottom: 1px dashed #eee;
+                .food-item{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .photo{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 8px 8px 8px 8px;
+                    }
+                    .food-list-hook{
+                        padding-left: 10px;
+                        flex: 1;
+                        .title{
+                            display: flex;
+                            img{
+                                width: 13px;
+                                height: 15px;
+                            }
+                            .name{
+                                font-size: 12px;
+                                color: #242424;
+                                padding-left: 2px;
+                            }
+                        }
+                        .batching{
+                            display:table;
+                            margin: 8px 0;
+                            padding: 0 3px;
+                            height: 15px;
+                            line-height: 15px;
+                            border-radius: 2px 2px 2px 2px;
+                            border: 1px solid #FF5D62;
+                            font-size: 9px;
+                            color: #FF5D62;
+                            box-sizing: border-box;
+                            .protein{}
+                            .calorie{}
+                        }
+                        .food-tariff{
+                            display: flex;
+                            justify-content: space-between;
+                            .quantity{
+                                display: flex;
+                                .num{
+                                    font-size: 9px;
+                                    color: #959595;
+                                }
+                                .label{
+                                    font-size: 9px;
+                                    color: #959595;
+                                    padding-left: 17px;
+                                }
+                            }
+                            .price{
+                                display: flex;
+                                align-items: flex-end;
+                                .mark{
+                                    font-size: 9px;
+                                    color: #242424;
+                                    vertical-align: middle;
+                                    padding-right: 2px;
+                                }
+                                .number{
+                                    font-size: 12px;
+                                    color: #242424;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+        .cost-msg{
+            width: 100%;
+            background: #fff;
+            box-sizing: border-box;
+            padding: 12px 12px 0;
+            .cost-list{
+                width: 100%;
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    .lable{
+                        font-size: 12px;
+                        color: #242424;
+                    }
+                    .price{
+                        display: flex;
+                        align-items: center;
+                        .mark{
+                            font-size: 9px;
+                            color: #242424;
+                        }
+                        .num{
+                            font-size: 12px;
+                            color: #242424;
+                        }
+                        .marks{
+                            font-size: 9px;
+                            color: #FF543B;
+                        }
+                        .nums{
+                            font-size: 12px;
+                            color: #FF543B;
+                        }
+                    }
+                }
+            }
+           .gather{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 16px;
+                padding-bottom: 12px;
+                border-bottom: 1px dashed #eee;
+                .text{
+                    font-size: 12px;
+                    color: #242424;
+                }
+                .num{
+                    font-size: 12px;
+                    color: #FF9B37;
+                    padding-right: 20px;
+                }
+                .subtotal{
+                    font-size: 12px;
+                    color: #000000;
+                }
+            }
+        }
+        .remarks{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 44px;
+            padding: 0 12px;
+            background: #fff;
+            box-sizing: border-box;
+            border-radius: 0px 0px 10px 10px;
+            .lable{
+                font-size: 12px;
+                color: #242424;
+            }
+            input{
+                flex: 1;
+                text-align: right;
+                font-size: 12px;
+                // color: #959595;
+                box-sizing: border-box;
+                margin:0 8px;
+                border: 0;
+                background: #fff;
+            }
+        }
+    }
+    //底部结算
+    .footer-pay{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 52px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        box-shadow: 2px 2px 3px 1px rgba(42,49,49,0.0800);
+        margin-top: 20px;
+        .icon{
+            width: 42px;
+            height: 43px;
+        }
+        .bage{
+            position: absolute;
+            top: 4px;
+            left: 42px;
+            width: 16px;
+            height: 16px;
+            background: #ff0000;
+            border-radius: 50%;
+            font-size: 11px;
+            text-align: center;
+            line-height: 16px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+        .price{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-left: 120px;
+            .new{
+                font-size: 20px;
+                color: #242424;
+            }
+            .old{
+                font-size: 11px;
+                color: #959595;
+                text-decoration:line-through
+            }
+        }
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 96px;
+            height: 40px;
+            background: linear-gradient(180deg, #FF5D62 0%, #FF7558 100%);
+            border-radius: 20px 20px 20px 20px;
+            font-size: 14px;
+            color: #FFFFFF;
+            border: 0;
+        }
+    }
+    //统一取餐和自定义取餐弹窗
+    .select-popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: rgba(61, 61, 63, 0.9);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        .popup-wrap{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 223px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: 15px 15px 0px 0px;
+            padding: 0 16px;
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+                color: #000000;
+                text-align: center;
+                padding-top: 15px;
+            }
+            .close{
+                position: absolute;
+                bottom: 196px;
+                right: 16px;
+                width: 12px;
+                height: 12px;
+            }
+            .mode-list{
+                margin-top: 20px;
+                .mode-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 18px 0 12px 0;
+                    border-bottom: 1px dashed #eee;
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                    .lable{
+                        font-size: 14px;
+                        color: #242424;
+                    }
+                    .dui{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+    //自提方式弹窗
+    .pattern-popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        .pattern-wrap{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 223px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: 15px 15px 0px 0px;
+            padding: 0 16px;
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+                color: #000000;
+                text-align: center;
+                padding-top: 15px;
+            }
+            .close{
+                position: absolute;
+                bottom: 196px;
+                right: 16px;
+                width: 12px;
+                height: 12px;
+            }
+            .mode-list{
+                margin-top: 20px;
+                .mode-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 18px 0 12px 0;
+                    border-bottom: 1px dashed #eee;
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                    .lable{
+                        font-size: 14px;
+                        color: #242424;
+                    }
+                    .dui{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+    //配送地址弹窗
+    .addr-popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        .addr-wrap{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 600px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: 15px 15px 0px 0px;
+            padding: 0 16px;
+            overflow: scroll;
+            // height: 100vh;
+            -webkit-overflow-scrolling: touch;
+            .title{
+                font-size: 14px;
+                font-weight: bold;
+                color: #000000;
+                text-align: center;
+                padding-top: 15px;
+            }
+            .close{
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 12px;
+                height: 12px;
+            }
+            .choose-addr{
+                height: 460px;
+                overflow: hidden;
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                ul{
+                    margin-top: 19px;
+                    .choose-item{
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px dashed #eee;
+                        padding-bottom: 15px;
+                        margin-bottom: 12px;
+                        .radio{
+                            width: 20px;
+                            text-align:center;
+                            img{
+                                width: 14px;
+                                height: 14px;
+                                vertical-align: middle;
+                            }
+                        }
+                        .information{
+                            flex: 1;
+                            padding-left: 14px;
+                            .info{
+                                font-size: 11px;
+                                color: #959595;
+                                padding-bottom: 12px;
+                                .name{
+                                }
+                                .phone{
+                                    padding-left: 8px;
+                                }
+                            }
+                            .address{
+                                font-size: 14px;
+                                color: #242424;
+                                width: 200px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                        }
+                        .edit{
+                            width: 15px;
+                        }
+                    }
+                }
+
+            }
+            .empty{
+                position: absolute;
+                top: 150px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 172px;
+                }
+                span{
+                    font-size: 16px;
+                    color: #242424;
+                }
+            }
+            .range-addr{
+                padding-left: 20px;
+                .text{
+                    font-size: 11px;
+                    color: #5D5D5D;
+                    padding-left: 14px;
+                    margin-bottom: 14px;
+                }
+                ul{
+                    .range-item{
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 15px;
+                        .information{
+                            flex: 1;
+                            padding-left: 14px;
+                            .info{
+                                font-size: 11px;
+                                color: #959595;
+                                padding-bottom: 12px;
+                                .name{
+                                }
+                                .phone{
+                                    padding-left: 8px;
+                                }
+                            }
+                            .address{
+                                font-size: 14px;
+                                color: #959595;
+                                width: 200px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                        }
+                        .edit{
+                            width: 15px;
+                        }
+                    }
+                }
+            }
+            .btnAdd{
+                position: fixed;
+                bottom: 50px;
+                button{
+                    width: 343px;
+                    height: 40px;
+                    border-radius: 6px 6px 6px 6px;
+                    border: 1px solid #FF5D62;
+                    background: #fff;
+                    font-size: 16px;
+                    color: #FF5D62;
+                }
+            }
+        }
+    }
+}
+// 动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+// 动画
+.fade1-enter-active,
+.fade1-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade1-enter,
+.fade1-leave-to {
+  opacity: 0;
+}
+// 动画
+.fade2-enter-active,
+.fade2-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade2-enter,
+.fade2-leave-to {
+  opacity: 0;
+}
+.more{
+    width: 6px;
+    height: 10px;
+}
